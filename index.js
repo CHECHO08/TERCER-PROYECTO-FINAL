@@ -1,11 +1,13 @@
 // Importar Express
 const express = require("express");
+const dbCONN = require("./database/db");
 
 // Ver puerto de entorno
 console.log(process.env.PORT);
 
 // Crear servidor
 const app = express();
+dbCONN();
 
 // Ruta principal
 app.get("/", (req, res) => {
@@ -19,5 +21,5 @@ app.get("/", (req, res) => {
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
-    console.log(`Servidor ejecutándose en el puerto 3000`);
+    console.log(`Servidor en el puerto 3000`);
 });
