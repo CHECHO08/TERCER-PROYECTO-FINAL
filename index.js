@@ -7,16 +7,15 @@ console.log(process.env.PORT);
 
 // Crear servidor
 const app = express();
-dbCONN();
+//dbCONN();
+app.use("", require("./routes/inventario"));
+
 
 // Ruta principal
-app.get("/", (req, res) => {
+//prueba get app.get("/", (req, res) => {
     //res.send("H");
-    res.status(200).json({
-        success: true,
-        msg:"ok"
-    })
-});
+    //res.status(200).json({
+        
 
 const PORT = process.env.PORT || 3000;
 
