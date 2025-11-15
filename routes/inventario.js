@@ -2,7 +2,7 @@ const { Router } = require("express");
 const router = Router();
 
 const { check } = require("express-validator");    
-const { crearLibro, getLibro, getLibroDetalle } = require("../controllers/inventario");
+const { crearLibro, getLibro, getLibroDetalle, actualizarLibro, eliminarLibro } = require("../controllers/inventario");
 const { validarCampos } = require("../middlewares/validaciones");
 
 // Rutas inventario
@@ -18,12 +18,12 @@ router.post("/lists", [
 
 router.get ("/lists/:id", getLibroDetalle);
 
-router.put("/lists/:id", (req, res) => {
-    res.json({
-        success: true,
-        msg: `Actualizar inventario ${req.params.id}`
-    });
-});
+router.put("/lists/:id", actualizarLibro);
+
+router.delete("/lists/:id",eliminarLibro);
+
+
+
 
 module.exports = router;
  
