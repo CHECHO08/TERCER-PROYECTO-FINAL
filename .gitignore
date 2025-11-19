@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
 
 # Compiled output
@@ -42,3 +43,7 @@ testem.log
 Thumbs.db
 
 
+=======
+node_modules
+.env
+>>>>>>> b3d19bbea103b4e1cede5d6926c8a85dcd3924a2

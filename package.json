@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "biblioteca",
   "version": "0.0.0",
   "scripts": {
@@ -37,5 +38,25 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "typescript": "~5.4.2"
+=======
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --env-file .env index.js",
+    "start": "nodemon --env-file .env index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "express-validator": "^7.3.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.19.3",
+    "nodemon": "^3.1.11"
+>>>>>>> b3d19bbea103b4e1cede5d6926c8a85dcd3924a2
   }
 }
