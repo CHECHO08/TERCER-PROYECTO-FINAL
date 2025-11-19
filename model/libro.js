@@ -1,41 +1,22 @@
-const { Schema, model } = require("mongoose");
+const { Schema, model } = require('mongoose');
 
-const libroSchema = new Schema({
+// Definición de la estructura de la colección 'Libro'
+const LibroSchema = Schema({
     titulo: {
         type: String,
         required: true,
-        unique: true
     },
-
     autor: {
         type: String,
-        required: true
+        required: true,
     },
-
-    apublicacion: {
-        type: String
+    anio: {
+        type: Number,
+        required: true,
     },
-
-    editorial: {
-        type: String
-    },
-
-    categoria: {
-        type: String
-    },
-
-    sede: {
-        type: String
-    }
-}, {
-    timestamps: true
+    // Podrías agregar un campo para el usuario o la fecha de creación si lo necesitas
 });
 
-libroSchema.methods.toJSON = function () {
-    const { __v, _id, ...object } = this.toObject();
-    return object;
-};
-
-
-module.exports = model("Libro", libroSchema);
+// Exportamos el modelo
+module.exports = model('Libro', LibroSchema, 'inventario');
 
